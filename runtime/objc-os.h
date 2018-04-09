@@ -106,6 +106,7 @@ class nocopy_t {
 #   include <libkern/OSCacheControl.h>
 #   include <System/pthread_machdep.h>
 #   include "objc-probes.h"  // generated dtrace probe definitions.
+#   include <pthread/qos_private.h>
 
 // Some libc functions call objc_msgSend() 
 // so we can't use them without deadlocks.
@@ -730,8 +731,7 @@ static inline mach_port_t mach_thread_self_direct()
 #if SUPPORT_QOS_HACK
 static inline pthread_priority_t pthread_self_priority_direct() 
 {
-    pthread_priority_t pri = (pthread_priority_t)
-        _pthread_getspecific_direct(_PTHREAD_TSD_SLOT_PTHREAD_QOS_CLASS);
+    pthread_priority_t pri = (pthread_priority_t)_pthread_getspecific_direct(_PTHREAD_TSD_SLOT_PTHREAD_QOS_CLASS);
     return pri & ~_PTHREAD_PRIORITY_FLAGS_MASK;
 }
 #endif
