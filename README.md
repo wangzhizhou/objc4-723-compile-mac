@@ -1,5 +1,7 @@
 # 编译OC运行时
 
+XCode 9 + MacOS(10.13)
+
 - objc开源库地址:<https://opensource.apple.com/source/objc4/>
 
 目录最新版本是`objc4-723`:<https://opensource.apple.com/tarballs/objc4/objc4-723.tar.gz>
