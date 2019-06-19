@@ -1,6 +1,9 @@
 # 编译OC运行时
 
-XCode 9 + MacOS(10.13)
+请使用正式版的Xcode和正式版的OS进行编译，beta版本可能会出现奇怪问题
+
+- objc4-750请跳转<https://github.com/gcfrun/objc4-750.git>
+- 编译过程: <http://www.imooc.com/article/268031?block_id=tuijian_wz>
 
 - objc开源库地址:<https://opensource.apple.com/source/objc4/>
 
